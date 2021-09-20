@@ -1,3 +1,4 @@
 function hello (str) {
-     return "Hello " + str + "!";
+     console.log("Hello " + str + "!");
  }
+hello();
