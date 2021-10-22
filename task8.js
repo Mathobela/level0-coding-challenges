@@ -1,25 +1,19 @@
 function convertToHoursMin (num) {
-    var minInHour = 60;
-    var decimalHours = num / minInHour;
-    var hours = Math.round(decimalHours);
-    var decimalMinutes = (decimalHours - hours) * minInHour;
-    var minutes = Math.round(decimalMinutes);
-    if (hours < 2 ) {
-        if (minutes > 1) {
-            return hours + " hour, " + minutes + " minutes";
-        }
-        else {
-            return hours + " hour, " + minutes + " minute";
-        }
+    const minInHour = 60;
+    const decimalHours = num / minInHour;
+    const hours = Math.floor(decimalHours);
+    const decimalMinutes = (decimalHours - hours) * minInHour;
+    const minutes = Math.floor(decimalMinutes);
+    let hourString = "hour";
+    let minString = "minute";
+    let time = "";
+    if (hours > 1) {
+        hourString = "hours";
     }
-    else {
-        if(minutes > 1) {
-            return hours + " hours, " + minutes + " minutes";
-        }
-        else {
-            return hours + " hours, " + minutes + " minute";
-        }
-
+    if (minutes > 1) {
+        minString = "minutes";
     }
+    time = hours + " " + hourString + ", " + minutes + " " + minString;
+    return time;
 }
-
+convertToHoursMin(66);
