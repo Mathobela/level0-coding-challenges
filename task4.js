@@ -6,3 +6,4 @@ function evenOrOdd (integer) {
         console.log("odd");
      }
  }
+evenOrOdd(4);
