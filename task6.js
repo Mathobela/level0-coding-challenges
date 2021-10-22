@@ -1,15 +1,16 @@
 function findMax (firstNum, secondNum, thirdNum) {
-    var maxNum = 0;
-    for (var i = 0; i < 3; i++) {
+    let maxNum = 0;
+    for (let i = 0; i < 3; i++) {
         if (firstNum > maxNum) {
             maxNum = firstNum;
         }
-        if (secondNum > maxNum) {
+        else if (secondNum > maxNum) {
             maxNum = secondNum;
         }
-        if (thirdNum > maxNum) {
+        else if (thirdNum > maxNum) {
             maxNum = thirdNum;
             }
      }
     return maxNum;
 }
+findMax(1, 3, 2);
